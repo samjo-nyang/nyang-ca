@@ -1,0 +1,7 @@
+[flake8]
+exclude =
+    venv,
+    __pycache__,
+    migrations,
+application-import-names = ca
+import-order-style = edited

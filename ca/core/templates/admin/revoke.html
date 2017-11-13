@@ -1,0 +1,52 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_urls static %}
+
+{% block extrahead %}
+    {{ block.super }}
+    {{ media }}
+{% endblock %}
+
+{% block extrastyle %}{{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static "admin/css/forms.css" %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static "admin/css/ca.css" %}"/>
+{% endblock %}
+
+{% block bodyclass %}{{ block.super }} app-{{ opts.app_label }} model-{{ opts.model_name }} revoke{% endblock %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+<a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+&rsaquo; <a href="{% url 'admin:app_list' app_label=opts.app_label %}">{{ opts.app_config.verbose_name }}</a>
+&rsaquo; <a href="{% url opts|admin_urlname:'changelist' %}">{{ opts.verbose_name_plural|capfirst }}</a>
+&rsaquo; <a href="{% url opts|admin_urlname:'change' object.pk|admin_urlquote %}">{{ object|truncatewords:"18" }}</a>
+&rsaquo; Revoke
+</div>
+{% endblock %}
+
+{% block content %}
+<h1>Revoke certificate - {{object.subject_str }}</h1>
+
+{% if object.revoked_at %}
+<ul class="messagelist">
+    <li class="error">The certificate is already revoked.</li>
+</ul>
+{% else %}
+{% if not object.ca.saved_password %}
+<p>Warning! The issuer (CA) does not have saved password; therefore, CRL will NOT regenerated</p>
+{% endif %}
+<form action="" method="post">
+    {% csrf_token %}
+    <fieldset class="module aligned">
+        <div class="form-row{% if form.non_field_errors %} errors{% endif %} field-reason">
+            {{ form.non_field_errors }}
+            <div class="field-box field-reason{% if form.reason.errors %} errors{% endif %}">
+                {{ form.revoked_reason.errors }}
+                {{ form.revoked_reason.label_tag }}
+                {{ form.revoked_reason }}
+            </div>
+        </div>
+    </fieldset>
+    <input type="submit" class="btn-danger" value="Revoke"/>
+</form>
+{% endif %}
+{% endblock %}

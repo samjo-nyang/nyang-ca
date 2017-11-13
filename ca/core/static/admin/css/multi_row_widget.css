@@ -1,0 +1,8 @@
+.multi-row-widget {
+    display: inline-block;
+}
+
+.multi-row-widget label {
+    float: right;
+    padding: 4px 0 0 10px;
+}

@@ -1,0 +1,71 @@
+p.alert {
+    color: red;
+    font-weight: bold;
+}
+
+a.button-padding {
+    padding: 10px 15px
+}
+
+.wrap-flex {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.wrap-flex > .col {
+    flex: 0;
+    margin-right: 20px;
+}
+
+fieldset.code .form-row > div > div.readonly, div.code {
+    white-space: pre;
+    white-space: pre-wrap;
+    font-family: monospace;
+    background: #faf8f8;
+    border: 1px solid #bebab0;
+    padding: 10px 15px !important;
+    display: table;
+    margin-top: 3px;
+}
+
+.submit-row a.deletelink,
+.submit-row a.btn {
+    margin-right: 5px;
+}
+
+.btn {
+    display: block;
+    border-radius: 4px;
+    padding: 10px 15px;
+    height: 15px;
+    line-height: 15px;
+    color: #fff;
+}
+
+.btn:link, .btn:visited {
+    color: #fff;
+}
+
+.btn:focus, .btn:hover {
+    text-decoration: none;
+}
+
+.btn-danger {
+    background: #ba2121 !important;
+}
+
+.btn-danger:focus,
+.btn-danger:hover,
+.btn-danger:active {
+    background: #a41515 !important;
+}
+
+.btn-warning {
+    background: #efb100 !important;
+}
+
+.btn-warning:focus,
+.btn-warning:hover,
+.btn-warning:active {
+    background: #dfa100 !important;
+}

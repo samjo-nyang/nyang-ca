@@ -1,0 +1,49 @@
+[{
+    "model": "core.ExtendedKeyUsage",
+    "pk": 1,
+    "fields": {
+        "oid": "1.3.6.1.5.5.7.3.2",
+        "name": "clientAuth",
+        "description": "SSL/TLS Web Client Authentication"
+    }
+}, {
+    "model": "core.ExtendedKeyUsage",
+    "pk": 2,
+    "fields": {
+        "oid": "1.3.6.1.5.5.7.3.3",
+        "name": "codeSigning",
+        "description": "Code Signing"
+    }
+}, {
+    "model": "core.ExtendedKeyUsage",
+    "pk": 3,
+    "fields": {
+        "oid": "1.3.6.1.5.5.7.3.4",
+        "name": "emailProtection",
+        "description": "E-mail Protection (S/MIME)"
+    }
+}, {
+    "model": "core.ExtendedKeyUsage",
+    "pk": 4,
+    "fields": {
+        "oid": "1.3.6.1.5.5.7.3.1",
+        "name": "serverAuth",
+        "description": "SSL/TLS Web Server Authentication"
+    }
+}, {
+    "model": "core.ExtendedKeyUsage",
+    "pk": 5,
+    "fields": {
+        "oid": "1.3.6.1.5.5.7.3.8",
+        "name": "timeStamping",
+        "description": "Trusted Timestamping"
+    }
+}, {
+    "model": "core.ExtendedKeyUsage",
+    "pk": 6,
+    "fields": {
+        "oid": "1.3.6.1.5.5.7.3.9",
+        "name": "OCSPSigning",
+        "description": "OCSP Signing"
+    }
+}]

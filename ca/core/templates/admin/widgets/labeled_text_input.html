@@ -1,0 +1,4 @@
+<p>
+    {% include "django/forms/widgets/input.html" %}
+    <label for="{{ widget.attrs.id }}"{% if widget.required %} class="required"{% endif %}>({{ widget.label }})</label>
+</p>

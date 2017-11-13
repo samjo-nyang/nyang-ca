@@ -1,0 +1,39 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_urls static %}
+
+{% block extrahead %}
+    {{ block.super }}
+    {{ media }}
+{% endblock %}
+
+{% block bodyclass %}{{ block.super }} app-{{ opts.app_label }} model-{{ opts.model_name }} privkey{% endblock %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+<a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+&rsaquo; <a href="{% url 'admin:app_list' app_label=opts.app_label %}">{{ opts.app_config.verbose_name }}</a>
+&rsaquo; <a href="{% url opts|admin_urlname:'changelist' %}">{{ opts.verbose_name_plural|capfirst }}</a>
+&rsaquo; <a href="{% url opts|admin_urlname:'change' object.pk|admin_urlquote %}">{{ object|truncatewords:"18" }}</a>
+&rsaquo; {% trans 'Private Key Download' %}
+</div>
+{% endblock %}
+
+{% block content %}
+<p class="alert">Important! This is the only time that you can see this private key!</p>
+<p>Your certificate ({{ subject_str}}) has been successfully issued.</p>
+
+<div class="wrap-flex">
+    <div class="col">
+        <h3>Encrypted Private Key</h3>
+        <div class="code">{{ privkey_encrypted }}</div>
+    </div>
+    <div class="col">
+        <h3>Unencrypted Private Key</h3>
+        <div class="code">{{ privkey }}</div>
+    </div>
+</div>
+
+<p><a href="{% url opts|admin_urlname:'change' object.pk|admin_urlquote %}" class="button button-padding">Check the Certificate</a></p>
+</div>
+</form>
+{% endblock %}

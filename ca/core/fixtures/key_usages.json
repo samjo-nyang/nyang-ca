@@ -1,0 +1,73 @@
+[{
+    "model": "core.KeyUsage",
+    "pk": 1,
+    "fields": {
+        "oid": "2.5.29.15.6",
+        "name": "cRLSign",
+        "description": "CRL Sign"
+    }
+}, {
+    "model": "core.KeyUsage",
+    "pk": 2,
+    "fields": {
+        "oid": "2.5.29.15.3",
+        "name": "dataEncipherment",
+        "description": "Data Encipherment"
+    }
+}, {
+    "model": "core.KeyUsage",
+    "pk": 3,
+    "fields": {
+        "oid": "2.5.29.15.8",
+        "name": "decipherOnly",
+        "description": "Decipher Only"
+    }
+}, {
+    "model": "core.KeyUsage",
+    "pk": 4,
+    "fields": {
+        "oid": "2.5.29.15.0",
+        "name": "digitalSignature",
+        "description": "Digital Signature"
+    }
+}, {
+    "model": "core.KeyUsage",
+    "pk": 5,
+    "fields": {
+        "oid": "2.5.29.15.7",
+        "name": "encipherOnly",
+        "description": "Encipher Only"
+    }
+}, {
+    "model": "core.KeyUsage",
+    "pk": 6,
+    "fields": {
+        "oid": "2.5.29.15.4",
+        "name": "keyAgreement",
+        "description": "Key Agreement"
+    }
+}, {
+    "model": "core.KeyUsage",
+    "pk": 7,
+    "fields": {
+        "oid": "2.5.29.15.5",
+        "name": "keyCertSign",
+        "description": "Certificate Sign"
+    }
+}, {
+    "model": "core.KeyUsage",
+    "pk": 8,
+    "fields": {
+        "oid": "2.5.29.15.2",
+        "name": "keyEncipherment",
+        "description": "Key Encipherment"
+    }
+}, {
+    "model": "core.KeyUsage",
+    "pk": 9,
+    "fields": {
+        "oid": "2.5.29.15.1",
+        "name": "nonRepudiation",
+        "description": "Non Repudiation"
+    }
+}]

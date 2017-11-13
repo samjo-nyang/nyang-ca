@@ -1,0 +1,58 @@
+[{
+    "model": "core.Profile",
+    "pk": 1,
+    "fields": {
+        "name": "ca",
+        "description": "A certificate for a CA.",
+        "key_usage_values": [1, 7],
+        "extended_key_usage_values": [],
+        "cn_in_san": false,
+        "expire_days": 3650
+    }
+}, {
+    "model": "core.Profile",
+    "pk": 2,
+    "fields": {
+        "name": "client",
+        "description": "A certificate for a client.",
+        "key_usage_values": [4],
+        "extended_key_usage_values": [1]
+    }
+}, {
+    "model": "core.Profile",
+    "pk": 3,
+    "fields": {
+        "name": "server",
+        "description": "A certificate for a server, allows client and server authentication.",
+        "key_usage_values": [4, 6, 8],
+        "extended_key_usage_values": [1, 4]
+    }
+}, {
+    "model": "core.Profile",
+    "pk": 4,
+    "fields": {
+        "name": "webserver",
+        "description": "A certificate for a webserver.",
+        "key_usage_values": [4, 6, 8],
+        "extended_key_usage_values": [4]
+    }
+}, {
+    "model": "core.Profile",
+    "pk": 5,
+    "fields": {
+        "name": "enduser",
+        "description": "A certificate for an enduser, allows client authentication, code and email signing.",
+        "key_usage_values": [2, 4, 8],
+        "extended_key_usage_values": [1, 2, 3],
+        "cn_in_san": false
+    }
+}, {
+    "model": "core.Profile",
+    "pk": 6,
+    "fields": {
+        "name": "ocsp",
+        "description": "A certificate for an OCSP responder.",
+        "key_usage_values": [4, 8, 9],
+        "extended_key_usage_values": [6]
+    }
+}]
